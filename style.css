@@ -1,0 +1,294 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+            180deg,
+            #0b0f1a 0%,
+            #0d1324 35%,
+            #0a0e18 70%,
+            #080b12 100%
+    );
+    color: #f0f0f0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(13, 19, 36, 0.96);
+    padding: 14px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1e2436;
+    backdrop-filter: blur(6px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+nav ul li a {
+    color: #e8eaf0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #9bbcff;
+}
+
+
+/* =========================
+   LAYOUT GLOBAL
+========================= */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 24px;
+}
+
+section {
+    width: 100%;
+}
+
+
+/* =========================
+   PRÉSENTATION
+========================= */
+#presentation h1 {
+    font-size: 2.6rem;
+    margin-bottom: 32px;
+}
+
+#presentation h1::after {
+    content: "";
+    display: block;
+    width: 72px;
+    height: 4px;
+    margin-top: 14px;
+    background: linear-gradient(90deg, #4f6fff, #8fa8ff);
+}
+
+#presentation .content {
+    max-width: 850px;
+}
+
+#presentation .content p {
+    color: #d6d9e0;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+#presentation .content p:last-child {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+/* =========================
+   IMAGE PROFIL & CV
+========================= */
+.image-cv-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.photo-profil {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 3px solid #5a73ff;
+    object-fit: cover;
+}
+
+.cv {
+    display: flex;
+    align-items: center;
+}
+
+.cv a {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #4f6fff, #6c87ff);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(79, 111, 255, 0.35);
+}
+
+
+/* =========================
+   FORMATION / DIPLÔMES
+========================= */
+#diplomes h1 {
+    font-size: 2.4rem;
+    margin-bottom: 32px;
+}
+
+.diplomes-list {
+    max-width: 720px;
+    list-style: none;
+}
+
+.diplomes-list li {
+    background-color: rgba(20, 26, 48, 0.9);
+    padding: 18px 26px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    border-left: 4px solid #5a73ff;
+    color: #e4e6eb;
+}
+
+
+/* =========================
+   PROJETS
+========================= */
+.projets-section {
+    padding: 80px 0;
+}
+
+.projets-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+.projet {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 44px;
+    background: linear-gradient(
+            145deg,
+            rgba(20, 26, 48, 0.95),
+            rgba(13, 18, 36, 0.95)
+    );
+    padding: 48px;
+    border-radius: 24px;
+    margin-bottom: 60px;
+}
+
+.projet h2 {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.projet h3 {
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9bbcff;
+    margin: 20px 0 8px;
+}
+
+.projet p {
+    grid-column: 1 / 2;
+    color: #d2d6e0;
+    line-height: 1.75;
+    text-align: justify;
+    margin-bottom: 14px;
+}
+
+.projet-img {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 24px auto;
+    border-radius: 16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: rgba(10, 14, 24, 0.95);
+    padding: 24px;
+    text-align: center;
+    border-top: 1px solid #1e2436;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    color: #e8eaf0;
+    font-size: 1.4rem;
+    transition: color 0.2s;
+}
+
+.footer-icons a:hover {
+    color: #9bbcff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+    .projet {
+        grid-template-columns: 1fr;
+        padding: 36px;
+        gap: 32px;
+    }
+
+    .projets-wrapper {
+        padding: 0 28px;
+    }
+
+    .projet p {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-cv-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 55px 20px;
+    }
+
+    #presentation h1,
+    #diplomes h1 {
+        font-size: 2rem;
+    }
+}
