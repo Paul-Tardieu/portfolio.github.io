@@ -59,7 +59,7 @@
         <h1 >Mes projets 2025-2026</h1>
 
         <div class="projet">
-            <h2>UE3 Conduire un projet: Site web de vote de textes de loi (Méthode Agile / Scrum)</h2>
+            <h2>UE5 Conduire un projet: Site web de vote de textes de loi (Méthode Agile / Scrum)</h2>
 
             <p>Site disponible ici: <a href="https://webinfo.iutmontp.univ-montp2.fr/~clavelt/sae3a-base/web/controleurFrontal.php?action=afficherQuestionsFinies&controleur=question">HEXAGORAS</a>
 
@@ -105,6 +105,65 @@
 
         </div>
 
+        <div class="projet">
+            <h2>UE3 Administrer des systèmes informatiques communicants complexes: <br>Administration et interconnexion de services réseau sur machines virtuelles</h2>
+
+            <p>
+                Dans le cadre d’un TD de mise en place de services réseau, nous avons conçu une infrastructure complète
+                basée sur plusieurs machines virtuelles interconnectées. L’objectif était de déployer, configurer et
+                sécuriser différents services système et réseau (web, base de données, messagerie, accès distant, NAT),
+                afin de simuler une architecture proche d’un environnement professionnel.
+            </p>
+
+            <h3>Contexte</h3>
+
+            <p>
+                Le projet a été réalisé en équipe au sein d’un environnement virtualisé. Chaque membre était responsable
+                d’un ou plusieurs services (Apache, PostgreSQL, MySQL, SSH, FTP, serveur mail Roundcube/Postfix,
+                GitHub Runner, serveur Minecraft, partage réseau Windows).
+                Les machines virtuelles devaient communiquer entre elles via un plan d’adressage défini, avec gestion
+                des accès distants et des autorisations réseau.
+
+                J’ai personnellement travaillé sur la mise en place et la sécurisation du service SSH,
+                la configuration d’un service de messagerie (Roundcube relié à Apache et au serveur mail),
+                ainsi que sur la redirection de ports via iptables pour permettre l’accès externe
+                à un serveur web hébergé sur une machine interne.
+            </p>
+
+            <h3>Objectifs</h3>
+
+            <p>
+                - Déployer plusieurs services réseau sur différentes machines virtuelles
+                - Configurer les accès distants sécurisés (SSH)
+                - Mettre en place une architecture client/serveur cohérente
+                - Autoriser les connexions inter-VM via configuration réseau et fichiers système
+                - Implémenter une redirection de port (NAT) via iptables
+                - Comprendre le fonctionnement des ports, des règles de firewall et du routage
+
+                L’objectif final était d’obtenir un environnement stable dans lequel chaque service
+                pouvait communiquer correctement avec les autres.
+            </p>
+
+            <h3>Apprentissages et compétences développées</h3>
+
+            <p>
+                Ce projet m’a permis de développer des compétences concrètes en administration système Linux :
+                installation de paquets via apt, gestion des services avec systemctl, modification de fichiers
+                de configuration (sshd_config, postgresql.conf, pg_hba.conf), et gestion des permissions.
+
+                J’ai également approfondi ma compréhension des mécanismes réseau :
+                plan d’adressage IP, ports, protocoles (HTTP, SSH, FTP, SMTP, IMAP),
+                redirection NAT avec iptables, règles de forwarding et sécurisation des accès.
+
+                Cette expérience illustre pleinement la compétence du BUT :
+                administrer des systèmes informatiques communicants complexes en assurant
+                leur déploiement, leur configuration, leur sécurisation et leur interconnexion.
+            </p>
+
+            <h2>Plan d’adressage réseau du projet</h2>
+
+            <img src="./ressources/plan-Adressage.png" alt="Plan d’adressage réseau des machines virtuelles" class="projet-img">
+        </div>
 
         <div class="projet">
             <h2>Jeu Pokémon TCG – Développement Java collaboratif</h2>
@@ -236,7 +295,7 @@
             <img src="./ressources/gitlab.png" alt="GitLab" width="30">
         </a>
         <a href="https://github.com/Paul-Tardieu" target="_blank">
-            <img src="./ressources/GitHub-logo.png" alt="Github" width="30">
+                <img src="./ressources/GitHub-logo.png" alt="Github" width="30"     style="background-color: white; padding: 6px; border-radius: 6px;">
         </a>
     </div>
 </footer>
