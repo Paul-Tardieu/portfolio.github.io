@@ -38,7 +38,7 @@
         <p>Aujourd’hui, je suis prêt à intégrer le monde professionnel et je recherche une entreprise que je peux intégrer en alternance, dans laquelle je pourrai mettre mes compétences au service de projets concrets, apprendre encore et contribuer réellement à la réussite de l’équipe.</p>
     </div>
     <div class="cv" id="cv" align="center">
-        <a href="./ressources/Anonyme%20CV%20Paul%20Tardieu%20decembre%202025.pdf" target="_blank"> Voir mon CV</a>
+        <a href="./ressources/CV%20Alternance%20Paul%20Tardieu%202026.pdf" target="_blank"> Voir mon CV</a>
     </div>
 </div>
 
@@ -57,53 +57,6 @@
     <div class="projets-wrapper">
 
         <h1 >Mes projets 2025-2026</h1>
-
-        <div class="projet">
-            <h2>UE5 Conduire un projet: Site web de vote de textes de loi (Méthode Agile / Scrum)</h2>
-
-            <p>Site disponible ici: <a href="https://webinfo.iutmontp.univ-montp2.fr/~clavelt/sae3a-base/web/controleurFrontal.php?action=afficherQuestionsFinies&controleur=question">HEXAGORAS</a>
-
-            </p>
-
-            <img src="./ressources/hexagoras2.png" alt="Site web de vote de textes de loi" class="projet-img img-hexagora">
-
-            <p>
-                Ce projet a été réalisé dans le cadre d’un travail en équipe visant à concevoir une plateforme web collaborative
-                dédiée à la soumission, la consultation et le vote de textes de loi. Le développement s’est appuyé sur une
-                méthodologie Agile (Scrum), avec la définition de rôles utilisateurs distincts (auteur, votant, organisateur,
-                administrateur) et l’utilisation d'user stories pour formaliser les besoins fonctionnels.
-
-            </p>
-
-            <h3>Contexte</h3>
-
-            <p>
-                L’objectif principal était de développer une application web cohérente, fonctionnelle et évolutive.
-                Les auteurs peuvent créer et gérer des questions, conserver des brouillons complets (co-auteurs,
-                dates de début et de fin de vote, configuration) et proposer ou modifier des soumissions.
-                Les utilisateurs disposent d’une interface lisible et homogène entre les phases de soumission et de vote,
-                avec des boutons d’action adaptés aux droits (activés ou désactivés selon le contexte) et un affichage
-                clair des longs contenus.
-                Le système de vote intègre plusieurs modes (vote classique, vote blanc, vote rejet), ainsi que des
-                fonctionnalités de modification, suppression et archivage. Des outils de recherche sur les questions
-                et les utilisateurs facilitent la navigation et la gestion des participants.
-            </p>
-
-            <h3>Objectifs</h3>
-
-            <p>
-                Ce projet m’a permis de renforcer mes compétences en conception et développement d’applications web,
-                notamment dans l’analyse de besoins à partir d'user stories, la conception fonctionnelle et
-                l’implémentation d’interfaces ergonomiques. J’ai également développé des compétences en gestion de projet
-                Agile en occupant le rôle de Scrum Master : organisation des sprints, gestion du backlog, animation des
-                réunions (daily, sprint review, rétrospective) et coordination de l’équipe.
-                Sur le plan technique, ce projet m’a permis d’améliorer ma rigueur de développement, ma capacité à produire
-                un code maintenable et à travailler efficacement en équipe dans un contexte proche du monde professionnel.
-            </p>
-
-            <h3>Apprentissages et compétences développées</h3>
-
-        </div>
 
         <div class="projet">
             <h2>UE3 Administrer des systèmes informatiques communicants complexes: <br>Administration et interconnexion de services réseau sur machines virtuelles</h2>
@@ -164,6 +117,123 @@
 
             <img src="./ressources/plan-Adressage.png" alt="Plan d’adressage réseau des machines virtuelles" class="projet-img">
         </div>
+
+        <div class="projet">
+            <h2>UE4 Gérer des données de l'information: <br>Conception et gestion d’une base de données relationnelle – SAE 3A</h2>
+
+            <p>
+                Dans le cadre du développement de notre plateforme web collaborative de vote,
+                j’ai participé à la conception, à l’implémentation et à l’optimisation
+                de la base de données relationnelle du projet (SAE3A).
+                L’objectif était d’assurer la cohérence, la performance et la fiabilité
+                des données manipulées par l’application.
+            </p>
+
+            <h3>Contexte</h3>
+
+            <p>
+                La base de données supporte l’ensemble du fonctionnement du site :
+                gestion des utilisateurs, des questions, des propositions, des votes,
+                des tours de scrutin et des relations entre auteurs et co-auteurs.
+                Elle devait garantir l’intégrité des données tout en respectant
+                des règles métier complexes liées aux différents types de vote
+                (jugement majoritaire, Borda, STI, etc.).
+
+                Le modèle relationnel final a été construit à partir d’un schéma
+                conceptuel puis implémenté en MySQL avec clés primaires, clés étrangères,
+                contraintes d’intégrité référentielle et règles métier avancées.
+            </p>
+
+            <h3>Objectifs</h3>
+
+            <p>
+                - Concevoir un modèle de données cohérent et normalisé
+                - Assurer l’intégrité référentielle entre les tables
+                - Implémenter des contraintes métier directement en base
+                - Optimiser les requêtes utilisées par l’application web
+                - Gérer les différents types de votes via une architecture adaptée
+
+                L’enjeu principal était d’avoir une base fiable, performante
+                et capable d’évoluer avec les sprints du projet.
+            </p>
+
+            <h3>Apprentissages et compétences développées</h3>
+
+            <p>
+                Ce projet m’a permis d’approfondir mes compétences en modélisation
+                et en gestion des données. J’ai travaillé sur la mise en place
+                de clés primaires et étrangères, de contraintes CHECK et ENUM,
+                ainsi que sur l’optimisation via la création d’index
+                sur les colonnes les plus sollicitées.
+
+                J’ai également participé à l’implémentation de règles métier avancées
+                à l’aide de triggers MySQL, notamment pour empêcher qu’un auteur
+                soit enregistré comme co-auteur d’une même proposition.
+
+                Des procédures stockées ont été développées pour :
+                - récupérer des propositions selon un tour et une question,
+                - supprimer proprement un vote en fonction de son type,
+                - vérifier si un utilisateur a déjà voté pour une question donnée.
+
+                Ce travail illustre pleinement la compétence
+                « Gérer des données de l’information » :
+                concevoir, structurer, sécuriser et optimiser des données
+                afin de garantir leur cohérence et leur exploitation efficace
+                par une application.
+            </p>
+
+            <h2>Schéma relationnel de la base de données</h2>
+
+            <img src="./ressources/schema-bdd.png" alt="Schéma relationnel de la base SAE3A" class="projet-img">
+        </div>
+
+        <div class="projet">
+            <h2>UE5 Conduire un projet: <br>Site web de vote de textes de loi (Méthode Agile / Scrum)</h2>
+
+            <p>Site disponible ici: <a href="https://webinfo.iutmontp.univ-montp2.fr/~clavelt/sae3a-base/web/controleurFrontal.php?action=afficherQuestionsFinies&controleur=question">HEXAGORAS</a>
+
+            </p>
+
+            <img src="./ressources/hexagoras2.png" alt="Site web de vote de textes de loi" class="projet-img img-hexagora">
+
+            <p>
+                Ce projet a été réalisé dans le cadre d’un travail en équipe visant à concevoir une plateforme web collaborative
+                dédiée à la soumission, la consultation et le vote de textes de loi. Le développement s’est appuyé sur une
+                méthodologie Agile (Scrum), avec la définition de rôles utilisateurs distincts (auteur, votant, organisateur,
+                administrateur) et l’utilisation d'user stories pour formaliser les besoins fonctionnels.
+
+            </p>
+
+            <h3>Contexte</h3>
+
+            <p>
+                L’objectif principal était de développer une application web cohérente, fonctionnelle et évolutive.
+                Les auteurs peuvent créer et gérer des questions, conserver des brouillons complets (co-auteurs,
+                dates de début et de fin de vote, configuration) et proposer ou modifier des soumissions.
+                Les utilisateurs disposent d’une interface lisible et homogène entre les phases de soumission et de vote,
+                avec des boutons d’action adaptés aux droits (activés ou désactivés selon le contexte) et un affichage
+                clair des longs contenus.
+                Le système de vote intègre plusieurs modes (vote classique, vote blanc, vote rejet), ainsi que des
+                fonctionnalités de modification, suppression et archivage. Des outils de recherche sur les questions
+                et les utilisateurs facilitent la navigation et la gestion des participants.
+            </p>
+
+            <h3>Objectifs</h3>
+
+            <p>
+                Ce projet m’a permis de renforcer mes compétences en conception et développement d’applications web,
+                notamment dans l’analyse de besoins à partir d'user stories, la conception fonctionnelle et
+                l’implémentation d’interfaces ergonomiques. J’ai également développé des compétences en gestion de projet
+                Agile en occupant le rôle de Scrum Master : organisation des sprints, gestion du backlog, animation des
+                réunions (daily, sprint review, rétrospective) et coordination de l’équipe.
+                Sur le plan technique, ce projet m’a permis d’améliorer ma rigueur de développement, ma capacité à produire
+                un code maintenable et à travailler efficacement en équipe dans un contexte proche du monde professionnel.
+            </p>
+
+            <h3>Apprentissages et compétences développées</h3>
+
+        </div>
+
 
         <div class="projet">
             <h2>Jeu Pokémon TCG – Développement Java collaboratif</h2>
